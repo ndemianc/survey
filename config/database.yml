@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: survey_production
-  username: survey
-  password: <%= ENV['SURVEY_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>

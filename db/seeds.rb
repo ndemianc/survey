@@ -14,7 +14,6 @@ collection = JSON.parse(File.read(data_file))['questions']
 
 collection.each do |item|
   question = Question.create!(question: item['question'])
-  byebug
   item['choices'].each do |choice|
     question.choices.create!(choice: choice)
   end
