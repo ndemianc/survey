@@ -1,0 +1,11 @@
+<h1>Question</h1>
+<p><%= @question.question  %></p>
+
+<%= form_for @answer, url: answer_index_path, method: 'post', class: 'nifty_form' do |f| %>
+  <% @question.choices.each do |choice| %>
+    <%= hidden_field_tag(:question, @question.id) %>
+    <%= radio_button_tag(:choice, choice.id) %>
+    <%= label_tag(:choice, choice.choice) %>
+  <% end %>
+  <%= f.submit "Create" %>
+<% end %>

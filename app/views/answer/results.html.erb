@@ -1,0 +1,8 @@
+<h1>Thank You for taking this quiz</h1>
+<h2>Below You can find results from all responders</h2>
+
+<% @collection.each do |item| %>
+  <h1>Question: <%= Question.find(item[:question_id]).question %></h1>
+  <h2>Choice: <%= Choice.find(item[:choice_id]).choice %></h2>
+  <br />
+<% end %>

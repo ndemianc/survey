@@ -1,0 +1,24 @@
+{
+  "questions": [
+    {
+      "question": "What is the name of the largest ocean on earth?",
+      "choices": ["The Pacific Ocean", "Test", "Test"]
+    },
+    {
+      "question": "What are the two main metals in the earth’s core?",
+      "choices": ["Iron and nickel", "Test", "Test"]
+    },
+    {
+      "question": "Which is hotter, the center of the earth or surface of the sun?",
+      "choices": ["The center of the earth", "Test", "Test"]
+    },
+    {
+      "question": "What do you call molten rock before it has erupted?",
+      "choices": ["Magma", "Test", "Test"]
+    },
+    {
+      "question": "What do you call it after it has erupted?",
+      "choices": ["Lava", "Test", "Test"]
+    }
+  ]
+}
