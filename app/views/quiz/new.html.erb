@@ -1,4 +1,7 @@
 <h1>Start New Quiz</h1>
-<%= form_for @quiz, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
-  <%= f.submit "Create" %>
-<% end %>
+
+<div class="box">
+  <%= form_for @quiz, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+    <%= f.submit "GET STARTED!" %>
+  <% end %>
+</div>
