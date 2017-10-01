@@ -1,24 +1,24 @@
 {
   "questions": [
     {
-      "question": "What is the name of the largest ocean on earth?",
-      "choices": ["The Pacific Ocean", "Test", "Test"]
+      "question": "Who is Luke Skywalker’s dad?",
+      "choices": ["French Montana", "Anakin Skywalker", "The Dude"]
     },
     {
-      "question": "What are the two main metals in the earth’s core?",
-      "choices": ["Iron and nickel", "Test", "Test"]
+      "question": "Which is the only film of the original six in which desert planet Tatooine doesn’t appear?",
+      "choices": ["The Last Jedi", "Revenge of the Sith", "The Empire Strikes Back"]
     },
     {
-      "question": "Which is hotter, the center of the earth or surface of the sun?",
-      "choices": ["The center of the earth", "Test", "Test"]
+      "question": "Who kills Jabba The Hutt?",
+      "choices": ["Princess Leia", "Frodo", "Han Solo"]
     },
     {
-      "question": "What do you call molten rock before it has erupted?",
-      "choices": ["Magma", "Test", "Test"]
+      "question": "What was Luke Skywalker’s original surname?",
+      "choices": ["Starkiller", "The Phantom", "Arnold Schwarzenegger"]
     },
     {
-      "question": "What do you call it after it has erupted?",
-      "choices": ["Lava", "Test", "Test"]
+      "question": "What planet do Wookiees come from?",
+      "choices": ["Venus", "Jupiter", "Kashyyk"]
     }
   ]
 }
