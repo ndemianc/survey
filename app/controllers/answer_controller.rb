@@ -1,6 +1,4 @@
 class AnswerController < ApplicationController
-  before_action :check_existing_quiz!, only: [:create, :index]
-
   def create
     @answer = current_quiz.answers.create(question_id: question, choice_id: choice)
     redirect_to question_quiz_path(current_quiz)

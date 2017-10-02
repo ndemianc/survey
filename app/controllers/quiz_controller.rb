@@ -1,5 +1,6 @@
 class QuizController < ApplicationController
-  before_action :check_existing_quiz!, only: [:question]
+  before_action :check_existing_quiz!, only: [:new, :create]
+  before_action :check_finished_quiz!, only: [:question]
 
   def new
     @quiz = Quiz.new
