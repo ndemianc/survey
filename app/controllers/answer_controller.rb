@@ -5,7 +5,12 @@ class AnswerController < ApplicationController
   end
 
   def results
-    @collection = AnswerService.call(Quiz.finished)
+    @choices = choices_hash
+    @results = questions.map do |question|
+      {
+        question.question => CountChoicesService.call(question.id)
+      }
+    end
   end
 
   private
@@ -16,5 +21,19 @@ class AnswerController < ApplicationController
 
   def choice
     @choice ||= params[:choice]
+  end
+
+  def choices
+    @choices ||= Array.wrap(Choice.all)
+  end
+
+  def choices_hash
+    choices_hash = {}
+    choices.each { |choice| choices_hash[choice.id] = choice.choice }
+    choices_hash
+  end
+
+  def questions
+    @questions ||= Array.wrap(Question.all)
   end
 end

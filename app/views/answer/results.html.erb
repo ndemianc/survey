@@ -1,8 +1,11 @@
 <h1>Thank You for taking this quiz</h1>
-<h2>Below You can find results from all responders</h2>
 
-<% @collection.each do |item| %>
-  <h5>Question: <%= Question.find(item[:question_id]).question %></h5>
-  <p>Choice: <%= Choice.find(item[:choice_id]).choice %></p>
+<% @results.each do |obj| %>
+  <% obj.each_pair do |question, choices| %>
+    <h1>Question: <%= question %></h1>
+    <% choices.each do |choice| %>
+      <h2><%= @choices[choice.choice_id] %> was selected <%= pluralize(choice.count, 'time') %></h2>
+    <% end %>
+  <% end %>
   <br />
 <% end %>
