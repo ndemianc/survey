@@ -1,11 +1,56 @@
-<h1>Thank You for taking this quiz</h1>
-
-<% @results.each do |obj| %>
-  <% obj.each_pair do |question, choices| %>
-    <h1>Question: <%= question %></h1>
-    <% choices.each do |choice| %>
-      <h2><%= @choices[choice.choice_id] %> was selected <%= pluralize(choice.count, 'time') %></h2>
+<h3>Thank You!</h3>
+<div class="carousel-container">
+  <h2>Here You can see all answers distribution for each question</h2>
+  <ul class="carousel my-carousel carousel--thumb">
+    <input class="carousel__activator" type="radio" id=1 name="thumb" checked="checked"/>
+    <input class="carousel__activator" type="radio" id=2 name="thumb"/>
+    <input class="carousel__activator" type="radio" id=3 name="thumb"/>
+    <input class="carousel__activator" type="radio" id=4 name="thumb"/>
+    <input class="carousel__activator" type="radio" id=5 name="thumb"/>
+    <div class="carousel__controls">
+      <label class="carousel__control carousel__control--backward" for=5></label>
+      <label class="carousel__control carousel__control--forward" for=2></label>
+    </div>
+    <div class="carousel__controls">
+      <label class="carousel__control carousel__control--backward" for=1></label>
+      <label class="carousel__control carousel__control--forward" for=3></label>
+    </div>
+    <div class="carousel__controls">
+      <label class="carousel__control carousel__control--backward" for=2></label>
+      <label class="carousel__control carousel__control--forward" for=4></label>
+    </div>
+    <div class="carousel__controls">
+      <label class="carousel__control carousel__control--backward" for=3></label>
+      <label class="carousel__control carousel__control--forward" for=5></label>
+    </div>
+    <div class="carousel__controls">
+      <label class="carousel__control carousel__control--backward" for=4></label>
+      <label class="carousel__control carousel__control--forward" for=1></label>
+    </div>
+    <% @results.each do |obj| %>
+      <li class="carousel__slide">
+        <% obj.each_pair do |question, choices| %>
+          <div class="question">
+            Question: <%= question %>
+            <ul>
+              <% choices.each do |choice| %>
+                <li>
+                  <h5>
+                    <%= @choices[choice.choice_id] %> was selected <%= pluralize(choice.count, 'time') %>
+                  </h5>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+      </li>
     <% end %>
-  <% end %>
-  <br />
-<% end %>
+    <div class="carousel__indicators">
+      <label class="carousel__indicator" for=1></label>
+      <label class="carousel__indicator" for=2></label>
+      <label class="carousel__indicator" for=3></label>
+      <label class="carousel__indicator" for=4></label>
+      <label class="carousel__indicator" for=5></label>
+    </div>
+  </ul>
+</div>

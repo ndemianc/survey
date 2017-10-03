@@ -23,16 +23,6 @@ html {
   box-sizing: inherit;
 }
 
-.box {
-  width: 100%;
-  max-width: 400px;
-  margin: 2rem auto;
-  background: white;
-  border: 1px solid white;
-  border-radius: 3px;
-  text-align: left;
-}
-
 h1 {
   color: #fff;
   margin: 10% 0 0 0;
@@ -44,100 +34,110 @@ p {
   opacity: .6;
 }
 
-// Hide those ugly radioboxes
-input[type=radio] {
-  display: none;
-}
-
-.active-label {
-  color: $primary;
-
-  &:before {
-    background: white;
-    border-color: $primary;
-  }
-}
-
-label {
-  font-size: 1rem;
-  font-weight: bold;
-  line-height: 1;
-  cursor: pointer;
-  display: block;
-  padding: 1rem 1rem 1rem 3rem;
-  position: relative;
-  border-top: 1px solid rgba(black,.1);
-  background: white;
-  whitespace: no-wrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  transition: all .15s ease;
-
-  &:focus,
-  &:hover,
-  &:active {
-    @extend .active-label;
-  }
-
-  &:first-of-type {
-    border: 0;
-  }
-
-  &:before {
-    content: "";
-    position: absolute;
-    left: 1rem;
-    top: 1rem;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    border: .2rem solid #ccc;
-  }
-}
-
-input:checked + label {
-  @extend .active-label;
-
-  &:before {
-    border-color: white;
-    border: none;
-    background: $primary;
-  }
-}
-
-input[type=submit] {
-  color: rgba(black,.5);
+.box {
   width: 100%;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  display: block;
-  padding: 1rem 1rem 1rem 3rem;
-  position: relative;
-  border: 0;
-  border-top: 1px solid #efefef;
-  background: #efefef;
-  whitespace: no-wrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  transition: all .15s ease;
+  max-width: 400px;
+  margin: 2rem auto;
+  background: white;
+  border: 1px solid white;
+  border-radius: 3px;
+  text-align: left;
 
-  &:focus,
-  &:hover,
-  &:active{
-    @extend .active-label;
+  // Hide those ugly radioboxes
+  input[type=radio] {
+    display: none;
   }
 
-  &:first-of-type{
-    border: 0;
+  .active-label {
+    color: $primary;
+
+    &:before {
+      background: white;
+      border-color: $primary;
+    }
   }
 
-  &:hover{
-    border-color: rgba(black,.1);
-  }
-
-  &:before{
-    border-color: white;
+  label {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    display: block;
+    padding: 1rem 1rem 1rem 3rem;
+    position: relative;
+    border-top: 1px solid rgba(black,.1);
     background: white;
+    whitespace: no-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all .15s ease;
+
+    &:focus,
+    &:hover,
+    &:active {
+      @extend .active-label;
+    }
+
+    &:first-of-type {
+      border: 0;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: .2rem solid #ccc;
+    }
+  }
+
+  input:checked + label {
+    @extend .active-label;
+
+    &:before {
+      border-color: white;
+      border: none;
+      background: $primary;
+    }
+  }
+
+  input[type=submit] {
+    color: rgba(black,.5);
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    padding: 1rem 1rem 1rem 3rem;
+    position: relative;
+    border: 0;
+    border-top: 1px solid #efefef;
+    background: #efefef;
+    whitespace: no-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all .15s ease;
+
+    &:focus,
+    &:hover,
+    &:active{
+      @extend .active-label;
+    }
+
+    &:first-of-type{
+      border: 0;
+    }
+
+    &:hover{
+      border-color: rgba(black,.1);
+    }
+
+    &:before{
+      border-color: white;
+      background: white;
+    }
   }
 }
